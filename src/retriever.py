@@ -21,27 +21,18 @@ DB_DIR = PROJECT_ROOT / "chroma_store"
 def load_transcripts():
 
     docs = []
-
     for path in glob.glob(f"{DATA_DIR}/*.vtt"):
-
         lines = []
-
         with open(path, "r", encoding="utf-8") as f:
-
             for line in f:
                 line = line.strip()
-
                 if not line or line == "WEBVTT" or "-->" in line:
                     continue
-
                 lines.append(line)
 
         text = " ".join(lines)
-
         match = re.search(r"Session[ _]*(\d+)", path)
-
         session = match.group(1) if match else "unknown"
-
         docs.append(
             Document(
                 page_content=text,
@@ -62,15 +53,12 @@ def load_transcripts():
 def load_store():
 
     embedding_function = get_embedding_function()
-
     # If database already exists, reuse it
     if os.path.exists(DB_DIR):
-
         return Chroma(
             persist_directory=str(DB_DIR),
             embedding_function=embedding_function,
         )
-
     # Load documents
     docs = load_transcripts()
 
@@ -90,7 +78,6 @@ def load_store():
 
 # 4. RETRIEVER
 def build_retriever():
-
     return load_store().as_retriever(
         search_kwargs={"k": 5}
     )
@@ -100,13 +87,10 @@ def build_retriever():
 if __name__ == "__main__":
 
     retriever = build_retriever()
-
     results = retriever.invoke(
         "what is regression testing?"
     )
-
     for r in results:
-
         print(
             f"[Session {r.metadata['session']}] "
             f"{r.page_content[:150]}...\n"
