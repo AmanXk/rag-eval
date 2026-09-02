@@ -7,7 +7,7 @@ from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
-from embeddings import get_embedding_function
+from src.embeddings import get_embedding_function
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent

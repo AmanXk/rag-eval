@@ -92,3 +92,4 @@ cython_debug/
 idea/
 .env
 chroma_store/
+.deepeval/
