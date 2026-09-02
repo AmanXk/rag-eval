@@ -67,7 +67,7 @@ First run auto-downloads the embedding model and builds the ChromaDB store. Resu
 ### Key Components
 
 | File | Purpose |
-|------|---------|
+| ------ | --------- |
 | `src/embeddings.py` | BGE embedding wrapper (LangChain-compatible) |
 | `src/retriever.py` | Transcript loading, chunking, ChromaDB store, retriever builder |
 | `evals/retriever_evals.py` | DeepEval evaluation pipeline |
@@ -129,7 +129,7 @@ Output: `.deepeval/.latest_test_run.json`
 <summary><strong>Configuration</strong></summary>
 
 | Setting | Value | File:Line |
-|---------|-------|-----------|
+| --------- | ------- | ----------- |
 | Embedding model | `BAAI/bge-small-en-v1.5` | `src/embeddings.py:6` |
 | Chunk size | 1000 chars | `src/retriever.py:66` |
 | Chunk overlap | 150 chars | `src/retriever.py:67` |
@@ -146,7 +146,7 @@ Output: `.deepeval/.latest_test_run.json`
 <summary><strong>Dependencies</strong></summary>
 
 | Package | Purpose |
-|---------|---------|
+| --------- | --------- |
 | `chromadb` | Vector database |
 | `deepeval` | LLM evaluation framework |
 | `langchain-chroma` | LangChain ChromaDB integration |

@@ -64,8 +64,8 @@ def load_store():
 
     # Split documents
     chunks = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=150,
+        chunk_size=500,
+        chunk_overlap=100,
     ).split_documents(docs)
 
     # Create vector database
