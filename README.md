@@ -190,4 +190,4 @@ Contributions welcome! Please open an issue or submit a PR.
 
 ### License
 
-This project is for educational purposes.
+This project is for educational purposes
