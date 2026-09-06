@@ -131,4 +131,6 @@ if __name__ == "__main__":
     print("\n--- streaming ---")
     for piece in generate_stream("what is online eval?", ctx):
         print(piece, end="", flush=True)
-    print()
+    
+    
+    
