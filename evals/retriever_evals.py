@@ -3,7 +3,7 @@ import os
 from deepeval.metrics import ContextualRecallMetric,ContextualPrecisionMetric
 from src.retriever import build_retriever
 from deepeval import evaluate
-from deepeval.test_case import LLMTestCase 
+from deepeval.test_case import LLMTestCase
 from deepeval.models import OllamaModel
 from deepeval.evaluate.configs import AsyncConfig
 from dotenv import load_dotenv
@@ -14,7 +14,7 @@ GOLDEN_PATH = "goldens/retriever_golden.json"
 JUDGE_MODELS = OllamaModel(
     model="gemma:2b",
     base_url="http://localhost:11434",
-    temperature=0    
+    temperature=0
     )
 THRESHOLD = 0.7
 
