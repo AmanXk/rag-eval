@@ -45,11 +45,6 @@ def load_transcripts():
 
     return docs
 
-
-# 2. EMBEDDING FUNCTION
-# see embeddings.py
-
-# 3. BUILD VECTOR STORE
 def load_store():
 
     embedding_function = get_embedding_function()
